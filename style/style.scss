@@ -1,0 +1,234 @@
+@import 'mixins';
+@import 'vars';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.center {
+    max-width: 1595.79px;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 69px;
+    padding-bottom: 69px;
+
+    &-flex {
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav {
+        width: 564px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 150px;
+
+        &_link {
+            @include text (700, 20px, 23.44px, $blackBlueText);
+            text-decoration: none;
+        }
+    }
+
+}
+
+.promo {
+    height: 898px;
+    margin-bottom: 154px;
+    background: url(../img/promo.jpg) no-repeat;
+    background-position: center;
+    background-size: 100vw;
+
+    &-flex {
+        display: flex;
+        justify-content: start;
+    }
+
+    &__content {
+        margin-top: 247px;
+
+        &_text {
+            @include text (400, 36px, 49.06px, $greenText);
+            margin-bottom: 8px;
+        }
+
+        &_title {
+            @include text (800, 70px, 82.03px, $blackBlueText);
+            margin-bottom: 23px;
+        }
+
+        &_button {
+            border: none;
+            border-radius: 16px;
+            background: $yellowBtn;
+            padding: 28px 39px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            @include text (700, 20px, 23.44px, $blackBlueText);
+        }
+    }
+}
+
+.offer {
+    margin-bottom: 190px;
+
+    &-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        border-radius: 16px;
+        width: 682.24px;
+        height: 367px;
+
+        &:first-child {
+            background: url(../img/offer1.png) no-repeat;
+        }
+
+        &:last-child {
+            background: url(../img/offer2.png) no-repeat;
+        }
+
+        &_content {
+            margin-top: 109px;
+            margin-left: 54.88px;
+
+            &-text {
+                @include text (400, 36px, 49.06px, $whiteText);
+                margin-bottom: 5px;
+            }
+
+            &-title {
+                @include text (800, 40px, 46.88px, $whiteText);
+            }
+
+            .item-two {
+                @include text (800, 40px, 46.88px, $blackBlueText);
+            }
+        }
+    }
+
+    
+}
+
+.about {
+    height: 1067px;
+    margin-bottom: 176px;
+    background: $grayBack;
+
+    &-block {
+        position: relative;
+    }
+
+    &__img {
+        margin-left: -100px;
+        position: absolute;
+
+    }
+
+    &__content {
+        max-width: 702px;
+        padding-top: 186px;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+
+        &_text {
+            @include text (400, 36px, 49.6px, $greenText);
+            margin-bottom: 8px;
+        }
+
+        &_title {
+            @include text (800, 50px, 58.59px, $blackBlueText);
+            margin-bottom: 14px;
+        }
+
+        &_info {
+            @include text (400, 18px, 29.77px, $grayText);
+            margin-bottom: 46px;
+        }
+
+        &_points {
+            margin-bottom: 46px;
+
+            .points {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 19px;
+
+                &:first-child {
+                    margin-bottom: 30px;
+                }
+
+                &__info {
+                    &:first-child {
+                        margin-bottom: 7px;
+                    }
+
+                    &_title {
+                        @include text (800, 25px, 29.3px, $blackBlueText);
+                    }
+
+                    &_text {
+                        @include text (400, 18px, 29.77px, $grayText);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.shop {
+    margin-bottom: 200px;
+
+    &__text {
+        @include text (400, 36px, 49.06px, $greenText);
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    &__title {
+        @include text (800, 50px, 58.59px, $blackBlueText);
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 122px;
+    }
+
+    &__button {
+        border: none;
+        border-radius: 16px;
+        background: $blackBlueBtn;
+        padding: 28px 39px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        @include text (700, 20px, 23.44px, $whiteText);
+    }
+}
